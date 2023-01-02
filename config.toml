@@ -1,0 +1,80 @@
+baseURL = "https://subhashydv.github.io/"
+languageCode = "en-us"
+title = "Hugo Atlantic"
+themesDir = "themes"
+theme = "hugo-atlantic-theme"
+
+
+enableGitInfo = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsUseClasses = true
+metaDataFormat = "yaml"
+paginate = 3
+
+[params]
+  google_analytics_id = ""
+
+  [params.homepage]
+    postLimit = 5
+    
+  [params.logo]
+    showLogoTextOnDesktop = true
+    showLogoTextOnMobile = true
+    showLogoImageOnDesktop = true
+    showLogoImageOnMobile = true
+    logoDesktopText = "Supreme Funicular"
+    logoDesktopImage = "images/logo/logo.png"
+    logoMobileText = "Supreme Funicular"
+    logoMobileImage = "images/logo/logo.png"
+    logoDesktopImageHeight = 100
+    logoDesktopImageWidth = 100
+    logoMobileImageHeight = 100
+    logoMobileImageWidth = 100
+
+  [params.fonts]
+    google_fonts = "https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro&display=swap"
+    heading = "Lato"
+    base = "Source Sans Pro"
+    monospace = "Fira Mono"
+
+  [params.seo]
+    meta_twitter_site = "@zerostaticio"
+    meta_twitter_creator = "@zerostaticio"
+    meta_og_image = "https://www.zerostatic.io/theme/hugo-atlantic/hugo-atlantic-screenshot.png"
+
+[build]
+  writeStats = true
+
+[permalinks]
+    posts = "blog/:year/:month/:title/"
+    pages = ":slug/"
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+    author = "authors"
+  
+# Main Menu
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+rssLimit = 20
+copyright = "2022 Supreme Funicular All rights reserved"
+languageCode = "en-us"
+
+[author]
+	name = "Subhash Yadav"
+	email = "subhashyadavtw@gmail.com"
