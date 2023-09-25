@@ -7,7 +7,7 @@ tags:
   - Tech
   - Tutorial
 
-categories: ["Tech", "Tutorial"]
+categories: ["Tech", "Kafka"]
 
 description: A tool that allows devs to play with distributed system
 thumbnail: "/images/kafka.png"
