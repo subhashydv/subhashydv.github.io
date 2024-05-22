@@ -11,8 +11,8 @@ tags:
 categories: ["Tech", "Tutorial", "Kotlin"]
 
 description: A Programming language
-thumbnail: "/images/Kotlin.jpeg"
-image: "/images/Kotlin.jpeg"
+thumbnail: "/images/kotlin.jpeg"
+image: "/images/kotlin.jpeg"
 ---
 
 ## About Kotlin : 
