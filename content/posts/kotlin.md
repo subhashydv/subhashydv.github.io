@@ -1,5 +1,5 @@
 ---
-title: "Exploring the Distinctions Between Kotlin and Java"
+title: "Kotlin"
 date: 2024-05-01T17:33:51+05:30
 draft: false
 
