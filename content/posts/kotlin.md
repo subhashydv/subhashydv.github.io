@@ -1,5 +1,5 @@
 ---
-title: "Kotlin"
+title: "Exploring the Distinctions Between Kotlin and Java"
 date: 2024-05-01T17:33:51+05:30
 draft: false
 
@@ -10,7 +10,7 @@ tags:
 
 categories: ["Tech", "Tutorial", "Kotlin"]
 
-description: A Programming language
+description: Highlighting the Key Differences Between Kotlin and Java
 thumbnail: "/images/kotlin.jpeg"
 image: "/images/kotlin.jpeg"
 ---
@@ -40,7 +40,7 @@ String greet = "Good morning"
 ```
 where in java, you need to specify the data type of the variable which can make your code more verbose.
 
-similarly for class we don't need to explicitly add getter and setters for fields
+similarly for class we don't need to explicitly add constructor
 
 ```
 // kotlin
@@ -71,7 +71,7 @@ public class Person {
    }
 }
 ```
-Similarly We have many more differences in syntax of kotlin and java.
+We have many more differences in syntax of kotlin and java.
 
 ### Null Safety :
 Null safety is another area where Kotlin differs from Java. In Java, it's possible to have null values assigned to a variable, which can lead to null pointer exceptions at runtime. Kotlin, on the other hand, requires you to explicitly define whether a variable can be null or not. This makes it easier to avoid null pointer exceptions during runtime.
