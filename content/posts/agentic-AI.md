@@ -130,3 +130,4 @@ Think of MCP like a USB-C port for AI applications. Just as USB-C provides a sta
 
 *Here we will be using MCP server to connect with /ask rest endpoint. You can find the code [here](https://github.com/subhashydv/personal-ai-chatbot/blob/main/mcp/server.js)* 
 
+: Thank you for reading :)
