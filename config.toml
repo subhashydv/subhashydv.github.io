@@ -23,9 +23,9 @@ paginate = 3
     showLogoTextOnMobile = true
     showLogoImageOnDesktop = true
     showLogoImageOnMobile = true
-    logoDesktopText = "Supreme Funicular"
+    logoDesktopText = "Supreme Viki"
     logoDesktopImage = "images/logo/logo.png"
-    logoMobileText = "Supreme Funicular"
+    logoMobileText = "Supreme Viki"
     logoMobileImage = "images/logo/logo.png"
     logoDesktopImageHeight = 100
     logoDesktopImageWidth = 100
@@ -72,7 +72,7 @@ paginate = 3
     weight = 3
 
 rssLimit = 20
-copyright = "2022 Supreme Funicular All rights reserved"
+copyright = "2022 Supreme Viki All rights reserved"
 languageCode = "en-us"
 
 [author]
