@@ -1,4 +1,0 @@
-[submodule "themes/hugo-atlantic-theme"]
-	path = themes/hugo-atlantic-theme
-	url = https://github.com/subhashydv/hugo-theme.git
-  branch = main
