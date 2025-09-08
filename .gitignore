@@ -3,6 +3,5 @@ node_modules
 .idea
 public
 resources
-themes/
 exampleSite/assets/css/dist
 exampleSite/package-lock.json
