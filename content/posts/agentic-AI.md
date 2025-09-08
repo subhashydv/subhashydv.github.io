@@ -12,7 +12,7 @@ tags:
 
 categories: ["Tech", "Tutorial", "AI", "AI Agent", "RAG Modal", "MCP Server"]
 
-description: "An overview to creating a chatbot that can ingest PDF or TXT documents and answer questions directly from their content. It integrates with the MCP protocol to serve knowledge directly to AI tools."
+description: "An overview to creating a chatbot that can ingest PDF or TXT documents and answer questions directly from their content."
 thumbnail: "/images/agentic-ai.jpg"
 image: "/images/agentic-ai-1.jpg"
 ---
@@ -26,7 +26,7 @@ In this post, I’ll walk you through how I created a personal chatbot powered b
 
 To make it even more useful, I have also added MCP (Model Context Protocol) server functionality, so it can be plugged into AI assistants like github-copilot.
 
-The complete code is available on GitHub — feel free to use it as a reference 👉 [Link Here](https://github.com/subhashydv/personal-ai-chatbot)
+**The complete code is available on GitHub — feel free to use it as a reference 👉 [Link Here](https://github.com/subhashydv/personal-ai-chatbot)**
 
 ## What is RAG : 
 
@@ -114,7 +114,7 @@ await openai.chat.completions.create({
 
 ### LLM : 
 
-Here, LLM (large language modal) role is to process the given prompt, which includes retrieved context, user query and custom prompt. it than generates a summarized and well-phrased response which can be responded to user.
+Here, LLM (large language modal) role is to process the given prompt, which includes retrieved context, user query and custom prompt. it than generates a summarized and well-phrased response which can be returned to user.
 
 LLM modals are : GPT-4, LLaMA etc.
 
@@ -124,10 +124,11 @@ LLM modals are : GPT-4, LLaMA etc.
 
 ## MCP Server : 
 
-An MCP server, or Model Context Protocol server, is a program that exposes specific capabilities and resources to AI applications, particularly Large Language Models (LLMs) and AI agents, through a standardized protocol. It acts as an intermediary, allowing AI models to securely interact with external tools and data sources.
+An MCP server, or Model Context Protocol server, is a program that exposes specific capabilities for AI applications to interact with LLMs and AI agents, through a standardized protocol. MCP is just a protocol similar to other protocols ie. http.
 
-Think of MCP like a USB-C port for AI applications. Just as USB-C provides a standardized way to connect electronic devices, MCP provides a standardized way to connect AI applications to external systems.
+You can think of MCP as a USB-C port for AI applications. Just as USB-C provides a standardized way to connect electronic devices, MCP provides a standardized way to connect AI applications to external systems.
 
-*Here we will be using MCP server to connect with /ask rest endpoint. You can find the code [here](https://github.com/subhashydv/personal-ai-chatbot/blob/main/mcp/server.js)* 
+*In this project, we’ll be using an MCP server to connect with the /ask REST endpoint.. You can check out the implementation [here](https://github.com/subhashydv/personal-ai-chatbot/blob/main/mcp/server.js)* 
 
-: Thank you for reading :)
+
+I hope you found this helpful 🙂 -- Thank you for reading :)
