@@ -128,7 +128,8 @@ An MCP server, or Model Context Protocol server, is a program that exposes speci
 
 You can think of MCP as a USB-C port for AI applications. Just as USB-C provides a standardized way to connect electronic devices, MCP provides a standardized way to connect AI applications to external systems.
 
-*In this project, we’ll be using an MCP server to connect with the /ask REST endpoint.. You can check out the implementation [here](https://github.com/subhashydv/personal-ai-chatbot/blob/main/mcp/server.js)* 
+*In this project, we’ll be using an MCP server to connect with the /ask REST endpoint.. You can check out the implementation [here](https://github.com/subhashydv/personal-ai-chatbot/blob/main/mcp/server.js).* 
 
+All the detailed instructions are available in the [Readme file](https://github.com/subhashydv/personal-ai-chatbot/blob/main/README.md).
 
 I hope you found this helpful 🙂 -- Thank you for reading :)
