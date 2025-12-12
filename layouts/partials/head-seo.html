@@ -1,0 +1,17 @@
+<!-- Include SEO Meta Tags -->
+{{ partial "seo.html" . }}
+
+<!-- Include Structured Data -->
+{{ partial "structured-data.html" . }}
+
+<!-- Google Analytics -->
+{{ if .Site.Params.google_analytics_id }}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.google_analytics_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ .Site.Params.google_analytics_id }}');
+</script>
+{{ end }}

@@ -13,7 +13,11 @@ metaDataFormat = "yaml"
 paginate = 5
 
 [params]
-  google_analytics_id = ""
+  google_analytics_id = "G-0MRZD7E3EQ"  # Add your Google Analytics ID here (e.g., "G-XXXXXXXXXX" or "UA-XXXXXXXXX-X")
+  
+  # Enable built-in Hugo features
+  enableRobotsTXT = true
+  enableEmoji = true
 
   [params.homepage]
     postLimit = 5
@@ -39,9 +43,11 @@ paginate = 5
     monospace = "Fira Mono"
 
   [params.seo]
-    meta_twitter_site = "@zerostaticio"
-    meta_twitter_creator = "@zerostaticio"
-    meta_og_image = "https://www.zerostatic.io/theme/hugo-atlantic/hugo-atlantic-screenshot.png"
+    meta_twitter_site = "@subhashydv"  # Replace with your Twitter handle
+    meta_twitter_creator = "@subhashydv"  # Replace with your Twitter handle
+    meta_og_image = "https://subhashydv.github.io/images/logo/logo.png"  # Your default OG image
+    meta_description = "Tech blog by Subhash Yadav covering software development, distributed systems, and modern technologies"
+    meta_keywords = "software development, kafka, kubernetes, terraform, distributed systems, tech blog"
 
 [build]
   writeStats = true
@@ -78,3 +84,34 @@ languageCode = "en-us"
 [author]
 	name = "Subhash Yadav"
 	email = "subhashyadavtw@gmail.com"
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[privacy]
+  [privacy.googleAnalytics]
+    respectDoNotTrack = true
+    anonymizeIP = true
+
+# Markup settings for SEO
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow HTML in markdown
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = "monokai"
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+
+# Output formats
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]

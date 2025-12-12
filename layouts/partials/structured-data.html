@@ -1,0 +1,109 @@
+{{ if .IsPage }}
+<!-- Article Schema (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ .Title }}",
+  "description": "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | plainify }}{{ end }}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ if .Params.image }}{{ .Params.image | absURL }}{{ else }}{{ .Site.Params.seo.meta_og_image }}{{ end }}"
+  },
+  "url": "{{ .Permalink }}",
+  "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Author.name }}{{ end }}",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.Params.seo.meta_og_image }}"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  },
+  {{ if .Params.tags }}
+  "keywords": "{{ delimit .Params.tags ", " }}",
+  {{ end }}
+  "articleSection": "{{ if .Params.categories }}{{ index .Params.categories 0 }}{{ else }}Technology{{ end }}",
+  "wordCount": {{ .WordCount }},
+  "inLanguage": "{{ .Site.LanguageCode }}"
+}
+</script>
+{{ else }}
+<!-- Website Schema (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ .Site.Title }}",
+  "url": "{{ .Site.BaseURL }}",
+  "description": "{{ .Site.Params.seo.meta_description }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.Params.seo.meta_og_image }}"
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ .Site.BaseURL }}search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+{{ if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ .Site.BaseURL }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ .Section | humanize }}",
+      "item": "{{ .Site.BaseURL }}{{ .Section }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ .Title }}",
+      "item": "{{ .Permalink }}"
+    }
+  ]
+}
+</script>
+{{ end }}
+{{ end }}
+
+<!-- Author/Person Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ .Site.Author.name }}",
+  "url": "{{ .Site.BaseURL }}",
+  "email": "{{ .Site.Author.email }}",
+  "sameAs": [
+    "https://github.com/subhashydv"
+  ]
+}
+</script>
