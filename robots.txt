@@ -1,0 +1,15 @@
+# robots.txt for https://subhashydv.github.io/
+# This file tells search engines which pages to crawl
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://subhashydv.github.io/sitemap.xml
+
+# Crawl-delay (optional - uncomment if needed)
+# Crawl-delay: 10
+
+# Disallow specific paths (if needed)
+# Disallow: /admin/
+# Disallow: /private/
